@@ -1,6 +1,5 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import "./style/index.css";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   HomePageUser,
   ManageUser,
@@ -9,9 +8,40 @@ import {
   LoginPage,
   RegisterPage,
   ModulPageUser,
+  ArticlePageUser,
   CreateUserAccount,
   CreateModule,
+  CreateArticle,
 } from "./views";
+import ScrollToTop from "./services/ScrollToTop";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import "./style/index.css";
 
-const root = createRoot(document.getElementById("root"));
-root.render(<LoginPage />);
+const App = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1500, once: true });
+    window.scrollTo(0, 0); // Scroll ke atas ketika halaman dimuat
+  }, []);
+
+  return (
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePageUser />} />
+        <Route path="/manage-user" element={<ManageUser />} />
+        <Route path="/manage-modul" element={<ManageModul />} />
+        <Route path="/manage-article" element={<ManageArticle />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/modul-page" element={<ModulPageUser />} />
+        <Route path="/article-page" element={<ArticlePageUser />} />
+        <Route path="/create-user-account" element={<CreateUserAccount />} />
+        <Route path="/create-modul" element={<CreateModule />} />
+        <Route path="/create-article" element={<CreateArticle />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;

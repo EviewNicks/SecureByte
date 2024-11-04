@@ -4,7 +4,10 @@ const HeaderSection = ({ title, subtitle, description }) => {
   return (
     <header className="header-section flex min-w-[1024px] px-20 justify-between items-center w-full">
       <div className="header-content flex justify-between items-center flex-grow">
-        <div className="heading-container flex pr-6 flex-col items-start flex-grow w-full">
+        <div
+          data-aos="fade-right"
+          className="heading-container flex pr-6 flex-col items-start flex-grow w-full"
+        >
           {/* Title Section */}
           <div className="title flex p-1 items-center w-full text-secondary">
             <h1 className="text-h-lg">{title}</h1>
@@ -47,7 +50,10 @@ const HeaderSection = ({ title, subtitle, description }) => {
         </div>
 
         {/* Description Section */}
-        <div className="description-container flex px-10 py-2.5 pl-10 justify-center items-center gap-2.5 flex-grow w-full">
+        <div
+          data-aos="fade-left"
+          className="description-container flex px-10 py-2.5 pl-10 justify-center items-center gap-2.5 flex-grow w-full"
+        >
           <p className="text-p-md text-gray-700 leading-relaxed">
             {description}
           </p>

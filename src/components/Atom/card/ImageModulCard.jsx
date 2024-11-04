@@ -7,7 +7,10 @@ const ImageModuleCard = ({
   altText = "Module Image",
 }) => {
   return (
-    <div className="image-card flex w-[392px] p-2 flex-col justify-center items-center gap-2.5 flex-shrink-0 self-stretch">
+    <div
+      
+      className="image-card flex w-[392px] p-2 flex-col justify-center items-center gap-2.5 flex-shrink-0 self-stretch"
+    >
       <div className="flex p-0.5 flex-col justify-center items-center gap-2.5 rounded-[24px] bg-gradient-to-r from-[#FFF0D1] to-[#DDB96F] shadow-[0px_8px_8px_rgba(0,0,0,0.25)]">
         <img
           src={imageSrc}

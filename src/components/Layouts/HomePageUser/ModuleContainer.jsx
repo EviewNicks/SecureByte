@@ -1,5 +1,6 @@
 // ModuleHome.jsx
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import HeadlineBoxLine from "../../Atom/Accesories/headlineBoxLine";
 import ModuleSection from "../../Molekul/HomePageUser/modulSection";
 import HeadlineButtonBox from "../../Molekul/HomePageUser/HeadlineButtonBox";
@@ -37,8 +38,14 @@ const ModuleContainer = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/modul-page");
+  };
+
   return (
-    <div className="module-page flex flex-col items-center">
+    <div className="module-page flex flex-col items-center pb-20">
       <HeadlineBoxLine
         text="Modul Pembelajaran"
         bgColor="bg-gold"
@@ -63,6 +70,7 @@ const ModuleContainer = () => {
         buttonText="Modul CeyberSecurity"
         iconPosition="right" // Ikon di sebelah kanan
         arrowDirection="right"
+        onClick={handleNavigate}
       />
 
       {/* <HeadlineBox /> */}

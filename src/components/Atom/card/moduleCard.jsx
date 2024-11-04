@@ -1,13 +1,21 @@
+import React, { useState, useEffect } from "react";
+
 const ModuleCard = ({
   thumbnail,
   title = "Default Title",
   subtitle = "Default Subtitle",
   pdfUrl = "#",
 }) => {
+  const [isValidThumbnail, setIsValidThumbnail] = useState(true);
+
+  useEffect(() => {
+    // Reset state saat thumbnail berubah
+    setIsValidThumbnail(true);
+  }, [thumbnail]);
+
+  // Mengatur style background image
   const thumbnailStyle = {
-    backgroundImage: thumbnail
-      ? `url(${thumbnail})`
-      : "url('/assets/img/add-image.png')",
+    backgroundImage: `url(${isValidThumbnail ? thumbnail : "/assets/img/add-image.png"})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
@@ -17,9 +25,19 @@ const ModuleCard = ({
       href={pdfUrl}
       target="_blank"
       rel="noopener noreferrer"
+      data-aos="zoom-in"
       className="block p-0.5 bg-dark-glass rounded-3xl shadow-md"
     >
       <article className="module-card flex w-[210px] h-[300px] p-[2px] pb-2 flex-col justify-between items-center rounded-[22px] bg-gold-out hover:scale-95 hover:cursor-pointer transition-transform duration-300 ease-in-out">
+        {/* Hidden img element to check if thumbnail is valid */}
+        <img
+          src={thumbnail}
+          alt="Thumbnail validation"
+          style={{ display: "none" }}
+          onLoad={() => setIsValidThumbnail(true)}
+          onError={() => setIsValidThumbnail(false)}
+        />
+
         {/* Thumbnail */}
         <div
           className="image h-[115px] flex-shrink-0 w-full rounded-t-[20px] bg-center bg-cover no-repeat"

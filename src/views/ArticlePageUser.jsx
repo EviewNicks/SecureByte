@@ -1,17 +1,9 @@
-// ModuleHome.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import HeadlineBoxLine from "../../Atom/Accesories/headlineBoxLine";
-import NewsSection from "../../Molekul/HomePageUser/newsSection";
-import HeadlineButtonBox from "../../Molekul/HomePageUser/HeadlineButtonBox";
+import NewsSection from "../components/Molekul/HomePageUser/newsSection";
+import Navbar from "../components/organisms/Navbar";
+import Footer from "../components/organisms/Footer";
 
-const NewsContainer = () => {
-  const navigate = useNavigate();
-
-  const handleNavigateArticle = () => {
-    navigate("/article-page");
-  };
-
+const ArticlePageUser = () => {
   const newsData = [
     {
       title:
@@ -69,40 +61,29 @@ const NewsContainer = () => {
   ];
 
   return (
-    <section className="flex px-20 pb-20 flex-col items-center gap-20 self-stretch min-w-screen-lg">
-      <HeadlineBoxLine
-        text="Modul Pembelajaran"
-        bgColor="bg-gold"
-        textColor="text-secondary"
-      />
-      <section className="news-box flex flex-col items-center gap-4">
-        {newsData.map((newsItem, index) => (
-          <NewsSection
-            key={index}
-            title={newsItem.title}
-            description={newsItem.description}
-            datetime={newsItem.datetime}
-            formattedDate={newsItem.formattedDate}
-            showBadge={newsItem.showBadge}
-            badgeText={newsItem.badgeText}
-            badgeBgColor={newsItem.badgeBgColor}
-            badgeTextColor={newsItem.badgeTextColor}
-            imageUrl={newsItem.imageUrl}
-          />
-        ))}
-      </section>
-
-      <HeadlineButtonBox
-        title="DATA SCIENCE MODULE"
-        subtitle="BY DataTech Academy"
-        buttonText="Modul CeyberSecurity"
-        iconPosition="right" // Ikon di sebelah kanan
-        arrowDirection="right"
-        onClick={handleNavigateArticle}
-      />
-      {/* <HeadlineBox /> */}
-    </section>
+    <div className="w-full flex justify-center">
+      <div className="flex min-w-[1024px] max-w-[1440px] w-full flex-col justify-center items-center">
+        <Navbar />
+        <section className="flex items-center content-center justify-center gap-1 pb-20 self-stretch flex-wrap">
+          {newsData.map((module, index) => (
+            <NewsSection
+              key={index}
+              title={module.title} // Menggunakan 'module' sesuai parameter di map()
+              description={module.description}
+              datetime={module.datetime}
+              formattedDate={module.formattedDate}
+              showBadge={module.showBadge}
+              badgeText={module.badgeText}
+              badgeBgColor={module.badgeBgColor}
+              badgeTextColor={module.badgeTextColor}
+              imageUrl={module.imageUrl}
+            />
+          ))}
+        </section>
+        <Footer />
+      </div>
+    </div>
   );
 };
 
-export default NewsContainer;
+export default ArticlePageUser;

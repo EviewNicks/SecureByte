@@ -79,7 +79,7 @@ const FlowLine = ({ position = "middle" }) => {
           viewBox="0 0 50 50"
           fill="none"
         >
-          <circle cx="25" cy="25" r="25" fill="#FFF0D1" />
+          <circle cx="25" cy="25" r="25" fill="#FFF9ED" />
         </svg>
       </div>
     </div>

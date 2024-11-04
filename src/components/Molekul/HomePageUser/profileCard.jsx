@@ -48,7 +48,7 @@ const ProfileCard = ({ imageUrl, name, className, linkedInUrl }) => {
       <ButtonVariant
         text="LinkedIn"
         shape="Circle"
-        size="large"
+        size="medium"
         primary={false}
         withIconLeft={<LinkedIn color="#FFF0D1" />}
         onClick={() => window.open(linkedInUrl, "_blank")} // Opens LinkedIn link

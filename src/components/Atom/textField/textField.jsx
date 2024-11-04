@@ -4,6 +4,7 @@ const TextField = ({
   type = "text", // Menambahkan properti type untuk menentukan tipe input
   size = "medium", // "textarea", "large", "medium", "small"
   status = "normal", // "success", "warning", "error", "normal"
+  name = "name",
   label = true,
   showStatus = true,
   placeholder = "Placeholder",
@@ -55,7 +56,8 @@ const TextField = ({
       >
         {type === "textarea" ? (
           <textarea
-            className="input-field w-full bg-transparent text- text-grey-2 placeholder:text-grey-2 focus:outline-none"
+            className="input-field w-full bg-transparent text-p-md text-grey-2 placeholder:text-grey-2 focus:outline-none"
+            name={name}
             placeholder={placeholder}
             value={value} //menghubungkan properti value
             onChange={onChange} //Menghubungkan properti onChange
@@ -66,7 +68,8 @@ const TextField = ({
           />
         ) : (
           <input
-            className="input-field w-full bg-transparent text-p-md font-normal text-grey-2 placeholder:text-grey-2 focus:outline-none"
+            className="input-field w-full h- bg-transparent text-p-md font-normal text-grey-2 placeholder:text-grey-2 focus:outline-none"
+            name={name}
             type={type}
             placeholder={placeholder}
             value={value} //menghubungkan properti value

@@ -2,6 +2,7 @@ import React from "react";
 import ModuleCard from "../components/Atom/card/moduleCard";
 import Navbar from "../components/organisms/Navbar";
 import Footer from "../components/organisms/Footer";
+import { Link } from "react-router-dom";
 
 const ModulPageUser = () => {
   const moduleData = [
@@ -10,7 +11,7 @@ const ModulPageUser = () => {
       title: "Creative Program for Students",
       subtitle:
         "This program fosters student creativity, innovation, and professional skills...",
-      pdfUrl: "https://example.com/pdf1",
+      pdfUrl: "/assets/pdf/Dasar-Cyber-Security.pdf",
     },
     {
       thumbnail: "/assets/img/Modul-2.jpg",
@@ -76,8 +77,8 @@ const ModulPageUser = () => {
   ];
 
   return (
-    <div class="w-full flex justify-center">
-      <div class="flex min-w-[1024px] max-w-[1440px] w-full flex-col justify-center items-center">
+    <div className="w-full flex justify-center">
+      <div className="flex min-w-[1024px] max-w-[1440px] w-full flex-col justify-center items-center">
         <Navbar />
         <section className="flex items-center content-center justify-center gap-1 pb-20 self-stretch flex-wrap">
           {moduleData.map((module, index) => (

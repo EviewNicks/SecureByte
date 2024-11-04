@@ -17,20 +17,31 @@ const ModuleSection = ({
       {isOdd ? (
         <>
           {/* Susunan ganjil: Image, FlowLine, Introduction */}
-          <ImageModuleCard imageSrc={imageSrc} altText={altText} />
+          <div data-aos="fade-right">
+            <ImageModuleCard imageSrc={imageSrc} altText={altText} />
+          </div>
           <FlowLine position={flowLinePosition} />
-          <div className="text-container flex w-[392px] flex-col justify-center items-center flex-shrink-0 self-stretch">
+          <div
+            data-aos="fade-left"
+            className="text-container flex w-[392px] flex-col justify-center items-center flex-shrink-0 self-stretch"
+          >
             <IntroductionCard title={title} description={description} />
           </div>
         </>
       ) : (
         <>
           {/* Susunan genap: Image, FlowLine, Introduction */}
-          <div className="text-container flex w-[392px] flex-col justify-center items-center flex-shrink-0 self-stretch">
+          <div
+            data-aos="fade-right"
+            className="text-container flex w-[392px] flex-col justify-center items-center flex-shrink-0 self-stretch"
+          >
             <IntroductionCard title={title} description={description} />
           </div>
           <FlowLine position={flowLinePosition} />
-          <ImageModuleCard imageSrc={imageSrc} altText={altText} />
+
+          <div data-aos="fade-left">
+            <ImageModuleCard imageSrc={imageSrc} altText={altText} />
+          </div>
         </>
       )}
     </article>

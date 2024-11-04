@@ -15,7 +15,8 @@ const HeadlineButtonBox = ({
   textColor = "text-secondary",
   buttonText = "buttonText",
   buttonShape = "Circle",
-  buttonSize = "small",
+  buttonSize = "medium",
+  onClick,
   buttonPrimary = false,
   iconPosition = "right", // 'left', 'right', or 'none'
   arrowDirection = "right", // 'up', 'down', 'left', 'right'
@@ -36,7 +37,10 @@ const HeadlineButtonBox = ({
   };
 
   return (
-    <section className="headline-box relative flex flex-col items-center self-stretch">
+    <section
+      data-aos="zoom-out"
+      className="headline-box relative flex flex-col items-center self-stretch"
+    >
       {/* HeadlineBox dengan teks, warna latar belakang, dan warna teks khusus */}
       <HeadlineBox
         title={title}
@@ -53,6 +57,7 @@ const HeadlineButtonBox = ({
           primary={buttonPrimary}
           withIconLeft={iconPosition === "left" ? renderIcon() : null}
           withIconRight={iconPosition === "right" ? renderIcon() : null}
+          onClick={onClick}
         />
       </div>
     </section>

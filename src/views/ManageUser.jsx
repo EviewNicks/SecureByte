@@ -1,14 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Pagination from "../components/Atom/Selector/pagination";
 import Navbar from "../components/organisms/Navbar";
 import { Table } from "../components/Molekul/table";
 import ButtonVariant from "../components/Atom/Button/Button";
 import { ArrowRight } from "../components/Atom/icons/arrow";
-
-const handleClick = () => {
-  alert("Kita masuk ke halaman pembuatan account");
-  window.location.href = "../src/Create-user-account.html";
-};
 
 const headers = ["Nama", "NIM", "Kelas", "Tahun", "Status Verifikasi"];
 const rowsUser = [
@@ -25,6 +21,8 @@ const rowsUser = [
 ];
 
 const ManageUser = () => {
+  const navigate = useNavigate();
+
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 20;
 
@@ -41,10 +39,10 @@ const ManageUser = () => {
         shape="Circle"
         size="large"
         primary={false}
-        onClick={handleClick}
         withIconRight={<ArrowRight color="#FFF0D1" />}
+        onClick={() => navigate("/create-user-account")}
       />
-      <Table headers={headers} rows={rows} />
+      <Table headers={headers} rows={rowsUser} />
       <Pagination
         totalPages={totalPages}
         currentPage={currentPage}

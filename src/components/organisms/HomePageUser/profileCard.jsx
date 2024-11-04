@@ -67,7 +67,10 @@ const ExampleProfileCard = () => {
   ];
 
   return (
-    <section className="profile-card-contaier flex p-8 justify-center items-center content-center gap-4 flex-wrap w-full">
+    <section
+      data-aos="zoom-in"
+      className="profile-card-contaier flex p-8 justify-center items-center content-center gap-4 flex-wrap w-full"
+    >
       {profiles.map((profile, index) => (
         <ProfileCard
           key={index}

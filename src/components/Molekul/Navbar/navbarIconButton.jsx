@@ -1,6 +1,7 @@
 // NavbarIconButton.jsx
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const NavbarIconButton = ({
   icon: IconComponent,
@@ -10,12 +11,17 @@ const NavbarIconButton = ({
   size = 32,
   onClick,
 }) => {
-  const Wrapper = href ? "a" : "button";
+  const Wrapper = href ? Link : "button";
 
   return (
     <Wrapper
-      href={href}
-      onClick={onClick}
+      to={href}
+      onClick={(e) => {
+        if (onClick) {
+          e.preventDefault(); // Mencegah navigasi jika alert ditampilkan
+          onClick();
+        }
+      }}
       aria-label={label}
       className="
         icon-navbar w-8 h-8 flex justify-center items-center cursor-pointer rounded-full

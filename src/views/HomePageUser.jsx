@@ -10,8 +10,8 @@ import Footer from "../components/organisms/Footer";
 
 const HomePageUser = () => {
   return (
-    <div class="w-full flex justify-center">
-      <div class="flex min-w-[1024px] max-w-[1440px] w-full flex-col justify-center items-center">
+    <div className="w-full flex justify-center">
+      <div className="flex min-w-[1024px] max-w-[1440px] w-full flex-col justify-center items-center">
         <Navbar />
         <HeaderContainer />
         <ModuleContainer />

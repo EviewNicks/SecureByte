@@ -7,7 +7,10 @@ const HeadlineBoxLine = ({
   bgColor = "bg-gold",
 }) => {
   return (
-    <section className="shape-line flex justify-between items-center flex-grow self-stretch">
+    <section
+      data-aos="fade-up"
+      className="shape-line flex justify-between items-center flex-grow self-stretch"
+    >
       {/* Left Container */}
       <div className="container flex flex-col items-center justify-center self-stretch gap-2.5 px-4 relative grow shrink-0 basis-0 min-w-0">
         <div className="rounded-rectangle-left self-stretch shrink-0 relative bg-cover z-10 rounded-lg">

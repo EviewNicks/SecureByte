@@ -17,17 +17,26 @@ const LearningSection = ({
 }) => {
   return (
     <section
+    data-aos="zoom-in"
       className={`flex h-[468px] py-6 flex-col items-start self-stretch rounded-2xl border-2 ${borderColor} ${bgColor}`}
     >
       {/* Header with Title */}
-      <header className="flex flex-col justify-center items-center gap-2.5 self-stretch">
+      <header
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+        className="flex flex-col justify-center items-center gap-2.5 self-stretch"
+      >
         <TitleBox text={title} textColor="text-secondary" bgColor="bg-gold" />
       </header>
 
       {/* Content Area */}
       <div className="flex px-20 justify-between items-start flex-grow self-stretch">
         {/* Text and Button Section */}
-        <article className="flex flex-col justify-center items-center gap-2 flex-grow self-stretch w-full">
+        <article
+          data-aos="fade-up-right"
+          data-aos-duration="2000"
+          className="flex flex-col justify-center items-center gap-2 flex-grow self-stretch w-full"
+        >
           <div className="flex flex-col justify-center items-center self-stretch">
             {/* Subtitle */}
             <div className="flex flex-col justify-center items-center flex-grow self-stretch text-secondary">
@@ -57,6 +66,8 @@ const LearningSection = ({
 
         {/* Image Section */}
         <div
+          data-aos="fade-up-left"
+          data-aos-duration="2000"
           className="flex justify-center items-center gap-2.5 flex-grow self-stretch w-full p-9 rounded-lg"
           style={{
             backgroundImage: `url(${image})`,

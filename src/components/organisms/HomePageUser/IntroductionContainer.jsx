@@ -4,7 +4,7 @@ import ContentSection from "../../Molekul/HomePageUser/contentSection";
 
 const IntroductionSection = () => {
   return (
-    <section class="introduction-container flex flex-col justify-center items-center gap-8 py-6 w-full">
+    <section className="introduction-container flex flex-col justify-center items-center gap-8 py-6 w-full">
       <HeaderSection
         title="Introduction"
         subtitle="To SecureByte Edu"

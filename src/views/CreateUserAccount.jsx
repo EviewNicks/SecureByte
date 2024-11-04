@@ -10,6 +10,17 @@ const CreateUserAccount = () => {
     { label: "Validation", href: "/Validation" },
   ];
 
+  // Mendefinisikan formData sebagai state
+  const [formData, setFormData] = useState({
+    username: "",
+    nim: "",
+    prodi: "",
+    kelas: "",
+    tahun: "",
+    password: "",
+    confirmPassword: "",
+  });
+
   const isFormAccountFilled = () =>
     formData.username &&
     formData.nim &&
@@ -21,6 +32,12 @@ const CreateUserAccount = () => {
     formData.password &&
     formData.confirmPassword &&
     formData.password === formData.confirmPassword;
+
+  // Fungsi untuk memperbarui formData
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
   return (
     <div className="flex justify-center items-center w-full min-h-screen">
@@ -44,6 +61,8 @@ const CreateUserAccount = () => {
           <FormCreateUserAccout
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
+            formData={formData} // Mengoper formData sebagai prop jika diperlukan
+            setFormData={setFormData} // Mengoper setFormData sebagai prop jika diperlukan
           />
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ButtonVariant from "../../Atom/Button/Button";
 import { CancelIcon } from "../../Atom/icons/Symbol";
+import { useNavigate } from "react-router-dom";
 import {
   FormInputCreateAccount,
   FormInputCreatePassword,
@@ -8,6 +9,8 @@ import {
 } from "../../organisms/FormInput";
 
 const FormCreateUserAccount = ({ activeIndex, setActiveIndex }) => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     username: "",
     nim: "",
@@ -66,15 +69,13 @@ const FormCreateUserAccount = ({ activeIndex, setActiveIndex }) => {
     formData.password === formData.confirmPassword;
 
   return (
-    <div className="form-input flex flex-col items-end flex-grow self-stretch rounded-3xl bg-whiteLayer-2">
+    <div className="form-input flex flex-col items-end flex-grow self-stretch rounded-3xl bg-whiteLayer-1">
       {/* Remove Button */}
       <button
         type="button"
         aria-label="Remove"
         className="remove-button flex items-center flex-col justify-center rounded-tr-3xl rounded-bl-3xl bg-blackLayer-0"
-        onClick={() =>
-          (window.location.href = "../src/Manage_User_by_Admin.html")
-        }
+        onClick={() => navigate("/manage-user")}
       >
         <div className="group p-2 flex flex-col justify-center items-center cursor-pointer">
           <CancelIcon size={48} />

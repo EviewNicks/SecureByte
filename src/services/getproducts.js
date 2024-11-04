@@ -5,4 +5,4 @@ const getallproducts = async () => {
     return products.data;
 }
 
-export {getallproducts};
+export default getallproducts;

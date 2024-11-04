@@ -2,28 +2,56 @@ import React, { useState } from "react";
 import TextField from "../../Atom/textField/textField";
 import ButtonVariant from "../../Atom/Button/Button";
 import Checkbox from "../../Molekul/CheckBox/CheckBox";
+import { login } from "../../../services";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [rememberMe, setRememberMe] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
+  // const nav = nav;
 
   // Fungsi untuk toggle nilai rememberMe
   const toggleRememberMe = () => {
     setRememberMe((prev) => !prev);
   };
 
-  const handleLogin = (e) => {
-    // Tambahkan logika login di sini
+  // ini handleLogin Fadil
+
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+
+  //   // Panggil fungsi login dan tangani respons
+  //   const token = await login(email, password);
+  //   if (token) {
+  //     setLoginMessage("Login berhasil! Anda telah masuk.");
+  //     localStorage.setItem("token", token);
+  //     navigate("/");
+  //   } else {
+  //     setLoginMessage("Login gagal! Silakan cek email dan password Anda.");
+  //   }
+  // };
+
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (email === "admin" && password === "admin") {
-      setLoginMessage("Anda telah berhasil login sebagai admin");
+    // Panggil fungsi login dan tangani respons
+    const token = await login(email, password);
+    if (token) {
+      if (email === "admin" && password === "admin") {
+        localStorage.setItem("role", "admin");
+        alert("Selamat datang, Admin!");
+      } else {
+        localStorage.setItem("role", "user");
+      }
+
+      setLoginMessage("Login berhasil! Anda telah masuk.");
+      localStorage.setItem("token", token);
+      navigate("/");
     } else {
-      setLoginMessage(
-        `Anda telah berhasil login sebagai user dengan email = ${email} dan password = ${password}`
-      );
+      setLoginMessage("Login gagal! Silakan cek email dan password Anda.");
     }
   };
 
@@ -47,6 +75,7 @@ const LoginForm = () => {
                 type="text"
                 size="large"
                 status="normal"
+                name="email"
                 label={true}
                 placeholder="Gmail"
                 inputLabel="Masukkan Gmail"
@@ -60,6 +89,7 @@ const LoginForm = () => {
                 type="password"
                 size="large"
                 status="normal"
+                name="password"
                 label={true}
                 placeholder="Password"
                 inputLabel="Masukkan Password"

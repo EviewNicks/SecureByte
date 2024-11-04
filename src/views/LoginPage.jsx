@@ -8,8 +8,8 @@ const LoginPage = ({
   description = "Dapatkan Rangkuman Materi, Tutorial Interaktif, dan Tips Keterampilan untuk Sukses di Dunia Kerja", // Flexibilitas untuk deskripsi
 }) => {
   return (
-    <div class="main flex flex-col items-center gap-2.5 flex-grow self-stretch">
-      <section class="login flex p-20 justify-center items-center flex-col gap-9 flex-grow self-stretch">
+    <div className="main flex flex-col items-center gap-2.5 flex-grow self-stretch">
+      <section className="login flex p-20 justify-center items-center flex-col gap-9 flex-grow self-stretch">
         <ShapeLine size="large" color="#092C4C" />
         {/* Login Form */}
         <article className="content-container flex py-2.5 px-22 flex-col-reverse items-center gap-2.5 self-stretch max-w-screen-lg w-full mx-auto">

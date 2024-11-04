@@ -43,7 +43,10 @@ const NewsSection = ({
   imageUrl = "/path/to/default-image.jpg",
 }) => {
   return (
-    <article className="news-container flex p-5 gap-6 max-w-[680px] rounded-lg bg-whiteLayer-3 shadow-md hover:scale-95 hover:cursor-pointer transition-transform duration-300 ease-in-out">
+    <article
+      data-aos="zoom-in"
+      className="news-container flex p-5 gap-6 max-w-[680px] rounded-lg bg-whiteLayer-3 shadow-md hover:scale-95 hover:cursor-pointer transition-transform duration-300 ease-in-out"
+    >
       {/* Image Container */}
       <NewsImage imageUrl={imageUrl} />
 
