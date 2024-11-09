@@ -6,7 +6,8 @@ import { ShapeLine } from "../components/Atom/Accesories";
 const LoginPage = ({
   title = "Platform Cerdas Untuk Memahami Materi", // Flexibilitas untuk title
   description = "Dapatkan Rangkuman Materi, Tutorial Interaktif, dan Tips Keterampilan untuk Sukses di Dunia Kerja", // Flexibilitas untuk deskripsi
-}) => {
+}) =>
+{
   return (
     <div className="main flex flex-col items-center gap-2.5 flex-grow self-stretch">
       <section className="login flex p-20 justify-center items-center flex-col gap-9 flex-grow self-stretch">

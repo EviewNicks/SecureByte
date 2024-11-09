@@ -1,59 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../../../context/Auth";
 import TextField from "../../Atom/textField/textField";
 import ButtonVariant from "../../Atom/Button/Button";
 import Checkbox from "../../Molekul/CheckBox/CheckBox";
 import { login } from "../../../services";
 import { useNavigate } from "react-router-dom";
 
-const LoginForm = () => {
+const LoginForm = () =>
+{
+  const { setAuthData } = useContext(AuthContext); // Ambil setAuthData dari AuthContext
   const navigate = useNavigate();
   const [rememberMe, setRememberMe] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
-  // const nav = nav;
 
-  // Fungsi untuk toggle nilai rememberMe
-  const toggleRememberMe = () => {
+  const toggleRememberMe = () =>
+  {
     setRememberMe((prev) => !prev);
   };
 
   // ini handleLogin Fadil
 
-  // const handleLogin = async (e) => {
-  //   e.preventDefault();
-
-  //   // Panggil fungsi login dan tangani respons
-  //   const token = await login(email, password);
-  //   if (token) {
-  //     setLoginMessage("Login berhasil! Anda telah masuk.");
-  //     localStorage.setItem("token", token);
-  //     navigate("/");
-  //   } else {
-  //     setLoginMessage("Login gagal! Silakan cek email dan password Anda.");
-  //   }
-  // };
-
-  const handleLogin = async (e) => {
+  const handleLogin = async (e) =>
+  {
     e.preventDefault();
 
-    // Panggil fungsi login dan tangani respons
     const token = await login(email, password);
-    if (token) {
-      if (email === "admin" && password === "admin") {
-        localStorage.setItem("role", "admin");
-        alert("Selamat datang, Admin!");
-      } else {
-        localStorage.setItem("role", "user");
-      }
-
+    if (token)
+    {
       setLoginMessage("Login berhasil! Anda telah masuk.");
-      localStorage.setItem("token", token);
-      navigate("/");
-    } else {
+
+      setAuthData({
+        id: localStorage.getItem("id"),
+        role: localStorage.getItem("role"),
+      });
+      navigate("/Dashboard");
+    } else
+    {
       setLoginMessage("Login gagal! Silakan cek email dan password Anda.");
     }
   };
+
 
   return (
     <form

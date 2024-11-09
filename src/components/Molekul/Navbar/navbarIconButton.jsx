@@ -10,18 +10,19 @@ const NavbarIconButton = ({
   color = "#FFF0D1",
   size = 32,
   onClick,
-}) => {
+}) =>
+{
   const Wrapper = href ? Link : "button";
 
   return (
     <Wrapper
       to={href}
-      onClick={(e) => {
-        if (onClick) {
-          e.preventDefault(); // Mencegah navigasi jika alert ditampilkan
-          onClick();
-        }
-      }}
+      // onClick={(e) => {
+      //   if (onClick) {
+      //     e.preventDefault(); // Mencegah navigasi jika alert ditampilkan
+      //     onClick();
+      //   }
+      // }}
       aria-label={label}
       className="
         icon-navbar w-8 h-8 flex justify-center items-center cursor-pointer rounded-full

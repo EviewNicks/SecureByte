@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { AuthContext } from "../context/Auth";
+
 import { useNavigate } from "react-router-dom";
 import Pagination from "../components/Atom/Selector/pagination";
 import Navbar from "../components/organisms/Navbar";
@@ -20,17 +22,30 @@ const rowsUser = [
   ["Rika Anindya", "230209501345", "PTIK D", "2023", "Belum Terverifikasi"],
 ];
 
-const ManageUser = () => {
+const HomePageAdmin = () =>
+{
   const navigate = useNavigate();
+
+  const { authData } = useContext(AuthContext);
+  // const [adminData, setAdminData] = useState(null);
+
+  useEffect(() =>
+  {
+    // Contoh penggunaan id untuk memuat data admin
+    if (authData.id)
+    {
+      console.log("Memuat data admin dengan ID:", authData.id);
+    }
+  }, [authData.id]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 20;
 
-  const handlePageChange = (page) => {
+  const handlePageChange = (page) =>
+  {
     setCurrentPage(page);
     console.log("Current page:", page);
   };
-
   return (
     <div className="table-container flex min-w-[1024px] px-20 flex-col justify-center items-end gap-2 flex-grow self-stretch">
       <Navbar />
@@ -52,4 +67,4 @@ const ManageUser = () => {
   );
 };
 
-export default ManageUser;
+export default HomePageAdmin;

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {
+import
+{
   HomePageUser,
   ManageUser,
   ManageModul,
@@ -12,14 +13,17 @@ import {
   CreateUserAccount,
   CreateModule,
   CreateArticle,
+  Dashboard
 } from "./views";
 import ScrollToTop from "./services/ScrollToTop";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./style/index.css";
 
-const App = () => {
-  useEffect(() => {
+const App = () =>
+{
+  useEffect(() =>
+  {
     Aos.init({ duration: 1500, once: true });
     window.scrollTo(0, 0); // Scroll ke atas ketika halaman dimuat
   }, []);
@@ -28,6 +32,7 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <Routes>
+        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/" element={<HomePageUser />} />
         <Route path="/manage-user" element={<ManageUser />} />
         <Route path="/manage-modul" element={<ManageModul />} />

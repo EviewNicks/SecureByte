@@ -14,10 +14,11 @@ const LearningSection = ({
   bgColor = "bg-[#FEE0AA]",
   borderColor = "border-[#FDC874]",
   image = "/assets/img/add-image.png", // Background image for right container
-}) => {
+}) =>
+{
   return (
     <section
-    data-aos="zoom-in"
+      data-aos="zoom-in"
       className={`flex h-[468px] py-6 flex-col items-start self-stretch rounded-2xl border-2 ${borderColor} ${bgColor}`}
     >
       {/* Header with Title */}

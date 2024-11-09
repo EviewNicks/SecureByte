@@ -8,27 +8,29 @@ import Bell from "../Atom/icons/functions/Bell";
 import User from "../Atom/icons/people/user";
 import ButtonVariant from "../Atom/Button/Button";
 
-const Navbar = () => {
+const Navbar = () =>
+{
   const role = localStorage.getItem("role");
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 
-  const handleAlert = () => {
+  const handleAlert = () =>
+  {
     alert("Fitur ini belum tersedia. Silakan tunggu update selanjutnya.");
   };
 
   const navLinks =
     role === "admin"
       ? [
-          { text: "Home", href: "/manage-user" },
-          { text: "Modul", href: "/manage-modul" },
-          { text: "Article", href: "/manage-article" },
-        ]
+        { text: "Home", href: "/manage-user" },
+        { text: "Modul", href: "/manage-modul" },
+        { text: "Article", href: "/manage-article" },
+      ]
       : [
-          { text: "Home", href: "/" },
-          { text: "Modul", href: "/modul-page" },
-          { text: "Article", href: "/article-page" },
-        ];
+        { text: "Home", href: "/" },
+        { text: "Modul", href: "/modul-page" },
+        { text: "Article", href: "/article-page" },
+      ];
 
   return (
     <nav className="navigation-bar z-50 fixed top-0 left-0 w-full px-20 pb-4 self-stretch gap-2.5">
@@ -46,13 +48,13 @@ const Navbar = () => {
               <NavbarIconButton
                 icon={Bell}
                 label="Notification"
-                href="/notifications"
+                href="/login"
                 onClick={handleAlert} // Menampilkan alert untuk fitur belum tersedia
               />
               <NavbarIconButton
                 icon={User}
                 label="Profile"
-                href="/profile"
+                href="/register"
                 onClick={handleAlert} // Menampilkan alert untuk fitur belum tersedia
               />
             </>
