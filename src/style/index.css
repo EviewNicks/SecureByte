@@ -6,4 +6,6 @@ body {
     @apply font-poppins;
     padding-top: 4rem;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
 }

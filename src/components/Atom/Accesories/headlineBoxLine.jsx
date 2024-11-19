@@ -5,7 +5,8 @@ const HeadlineBoxLine = ({
   text = "HeadLine Box",
   textColor = "text-secondary",
   bgColor = "bg-gold",
-}) => {
+}) =>
+{
   return (
     <section
       data-aos="fade-up"
@@ -46,9 +47,9 @@ const HeadlineBoxLine = ({
 
       {/* Vertical Container */}
       <div
-        className={`vertical-container py-4 px-12 rounded-full ${bgColor} shadow-[0_8px_8px_rgba(0,0,0,0.25)]`}
+        className={`vertical-container md:py-4 md:px-12 py-4 px-8 rounded-full ${bgColor} shadow-[0_8px_8px_rgba(0,0,0,0.25)]`}
       >
-        <h2 className={`text-tl-md font-semibold ${textColor}`}>{text}</h2>
+        <h2 className={`md:text-tl-md text-tl-sm font-semibold ${textColor}`}>{text}</h2>
       </div>
 
       {/* Right Container */}

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBox from "../../Atom/Accesories/titleBox";
 import ButtonVariant from "../../Atom/Button/Button";
-import ArrowRight from "../../Atom/icons/arrow/arrowRight";
+import { ArrowRight, ArrowLeft } from "../../Atom/icons/arrow";
 
 const LearningSection = ({
   title = "SecureByte Edu",
@@ -19,7 +19,7 @@ const LearningSection = ({
   return (
     <section
       data-aos="zoom-in"
-      className={`flex h-[468px] py-6 flex-col items-start self-stretch rounded-2xl border-2 ${borderColor} ${bgColor}`}
+      className={`flex flex-col h-auto py-6 items-center justify-center gap-6 rounded-2xl border-2 ${borderColor} ${bgColor}`}
     >
       {/* Header with Title */}
       <header
@@ -31,14 +31,26 @@ const LearningSection = ({
       </header>
 
       {/* Content Area */}
-      <div className="flex px-20 justify-between items-start flex-grow self-stretch">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-8 px-6 lg:px-20 flex-grow w-full max-w-screen-lg mx-auto">
+
+        {/* Image Section */}
+        <div
+          data-aos="fade-up-left"
+          data-aos-duration="2000"
+          className="flex justify-center items-center lg:w-3/4 md:w-1/2 aspect-video bg-center rounded-lg  bg-contain bg-no-repeat"
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        ></div>
+
+
         {/* Text and Button Section */}
         <article
           data-aos="fade-up-right"
           data-aos-duration="2000"
-          className="flex flex-col justify-center items-center gap-2 flex-grow self-stretch w-full"
+          className="flex flex-col justify-center items-center gap-2 flex-grow self-stretch w-full lg:col-span-6 md:col-span-6 lg:p-0 md:px-20 md:py-8 md:items-center sm:col-span-4"
         >
-          <div className="flex flex-col justify-center items-center self-stretch">
+          <div className="flex flex-col justify-center items-center self-stretch text-center md:text-center lg:text-left">
             {/* Subtitle */}
             <div className="flex flex-col justify-center items-center flex-grow self-stretch text-secondary">
               <h2 className="text-tl-md font-semibold">{subtitle}</h2>
@@ -50,34 +62,27 @@ const LearningSection = ({
           </div>
 
           {/* Link and Button */}
-          <div className="flex flex-col justify-center items-start self-stretch">
-            <div className="flex py-1.5 px-2.5 items-center gap-2.5 self-stretch text-secondary">
+          <div className="flex flex-col justify-center items-center md:self-center lg:self-start text-center ">
+            <div className="flex py-1.5 px-2.5 items-center justify-center gap-2.5 self-stretch text-secondary text-center ">
               <span className="text-lb-md">{moduleLinkText}</span>
             </div>
+            {/* Button with Icons on Both Sides in Tablet and Mobile */}
             <ButtonVariant
               text={buttonLabel}
               shape="Box"
               size="large"
               primary={false}
               onClick={onButtonClick}
+              withIconLeft={<ArrowLeft />}
+              iconLeftClass="lg:hidden md:inline" // Hanya tampil di mobile
               withIconRight={<ArrowRight />}
             />
           </div>
         </article>
 
-        {/* Image Section */}
-        <div
-          data-aos="fade-up-left"
-          data-aos-duration="2000"
-          className="flex justify-center items-center gap-2.5 flex-grow self-stretch w-full p-9 rounded-lg"
-          style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
+
       </div>
-    </section>
+    </section >
   );
 };
 

@@ -1,0 +1,65 @@
+[
+    {
+        "imageUrl": "/assets/img/profile/Muh-Agung-M.jpg",
+        "name": "Muh Agung M",
+        "className": "PTIK E",
+        "linkedInUrl": "https://www.linkedin.com/in/muh-agung-m-5a4432325",
+        "gender": "Male"
+    },
+    {
+        "imageUrl": "/assets/img/profile/Nurazisah.jpg",
+        "name": "Nurazisah Khumaerah R.",
+        "className": "PTIK E",
+        "linkedInUrl": "https://www.linkedin.com/in/nurazisah-khumaerah-rusdianto-76b11128a/",
+        "gender": "Female"
+    },
+    {
+        "imageUrl": "/assets/img/profile/Akbar.jpg",
+        "name": "Akbar M. Ananda Putra",
+        "className": "PTIK E",
+        "linkedInUrl": "https://www.linkedin.com/in/akbar-m-ananda-putra-putra-7302a6285",
+        "gender": "Male"
+    },
+    {
+        "imageUrl": "/assets/img/profile/Aar-Setia-Budi.jpg",
+        "name": "Aar Setia Budi",
+        "className": "TEKOM E",
+        "linkedInUrl": "https://www.linkedin.com/in/aar-setia-budi-807783325/",
+        "gender": "Male"
+    },
+    {
+        "imageUrl": "/assets/img/profile/Ikaa-Amaliah.jpg",
+        "name": "Ika Amaliah",
+        "className": "Tekom E",
+        "linkedInUrl": "http://www.linkedin.com/in/ika-amaliah-a66931325",
+        "gender": "Female"
+    },
+    {
+        "imageUrl": "/assets/img/profile/Mirza.jpg",
+        "name": "Rahmat Mirza Zahresy",
+        "className": "PTIK E",
+        "linkedInUrl": "https://www.linkedin.com/in/rahmat-mirsa-974256325",
+        "gender": "Male"
+    },
+    {
+        "imageUrl": "/assets/img/profile/Intan.jpg",
+        "name": "Intan Nuraeni",
+        "className": "Tekom E",
+        "linkedInUrl": "https://www.linkedin.com/in/intan-nuraeni-68b558325",
+        "gender": "Female"
+    },
+    {
+        "imageUrl": "/assets/img/profile/Agil.jpg",
+        "name": "Agil",
+        "className": "PTIK E",
+        "linkedInUrl": "https://www.linkedin.com/in/agil-6125ab325",
+        "gender": "Male"
+    },
+    {
+        "imageUrl": "/assets/img/profile/Ardiansyah.jpg",
+        "name": "Ardiansyah",
+        "className": "Tekom E",
+        "linkedInUrl": "https://www.linkedin.com/in/ardi-ansyah-421708325/",
+        "gender": "Male"
+    }
+]

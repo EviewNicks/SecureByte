@@ -1,0 +1,93 @@
+[
+  {
+    "imageSrc": "/assets/img/Modul-1.jpg",
+    "altText": "Panduan Keamanan Hardening WordPress",
+    "title": "PANDUAN KEAMANAN HARDENING WORDPRESS",
+    "description": "Dokumen ini adalah panduan keamanan untuk menguatkan instalasi WordPress dengan membahas kerentanan umum dan langkah-langkah pencegahan yang diperlukan.",
+    "link": "/assets/pdf/modules/Panduan-Keamanan-Hardening-WordPress.pdf",
+    "createdAt": "01-10-2024 08:00",
+    "updatedAt": "20-10-2024 14:30",
+    "author": "BSSN Indonesia",
+    "category": "Keamanan",
+    "difficultyLevel": "intermediate",
+    "tags": ["security", "wordpress", "hardening"]
+  },
+  {
+    "imageSrc": "/assets/img/Modul-2.jpg",
+    "altText": "Panduan Menghadapi Serangan DOS",
+    "title": "PANDUAN MENGHADAPI SERANGAN DENIAL OF SERVICE (DOS)",
+    "description": "Panduan ini berisi strategi penanganan dan mitigasi serangan Distributed Denial of Service (DDoS) untuk UKM, termasuk jenis-jenis serangan, teknik refleksi dan amplifikasi, serta langkah-langkah pencegahan.",
+    "link": "/assets/pdf/modules/Panduan-Menangani-Serangan-DOS.pdf",
+    "createdAt": "15-09-2024 09:15",
+    "updatedAt": "18-10-2024 11:45",
+    "author": "BSSN Indonesia",
+    "category": "Keamanan",
+    "difficultyLevel": "beginner",
+    "tags": ["ddos", "mitigation", "small business"]
+  },
+  {
+    "imageSrc": "/assets/img/Modul-3.jpg",
+    "altText": "Panduan Pengamanan Insiden Malware",
+    "title": "PEDOMAN PENGAMANAN INSIDEN MALICIOUS (MALWARE)",
+    "description": "Panduan ini memberikan prosedur penanganan insiden malware, meliputi persiapan, identifikasi, containment, pemulihan, serta langkah tindak lanjut untuk mencegah insiden berulang.",
+    "link": "/assets/pdf/modules/Panduan-Penanganan-Insiden-Malware.pdf",
+    "createdAt": "20-09-2024 12:30",
+    "updatedAt": "20-10-2024 16:00",
+    "author": "BSSN Indonesia",
+    "category": "Keamanan",
+    "difficultyLevel": "intermediate",
+    "tags": ["malware", "incident response", "containment"]
+  },
+  {
+    "imageSrc": "/assets/img/Modul-4.jpg",
+    "altText": "Panduan Penanganan Insiden Web Defacement",
+    "title": "PANDUAN PENANGANAN INSIDEN WEB DEFACEMENT",
+    "description": "Dokumen ini membahas cara penanganan dan mitigasi insiden web defacement bertema judi online, termasuk alur serangan, teknik pengamanan, serta rekomendasi pencegahan untuk meningkatkan keamanan situs web.",
+    "link": "/assets/pdf/modules/Panduan-Penanganan-Insiden-Web-Defacement-Judi-Online.pdf",
+    "createdAt": "22-09-2024 08:00",
+    "updatedAt": "25-10-2024 09:30",
+    "author": "BSSN Indonesia",
+    "category": "Keamanan",
+    "difficultyLevel": "intermediate",
+    "tags": ["web defacement", "cybersecurity", "prevention"]
+  },
+  {
+    "imageSrc": "/assets/img/Modul-5.jpg",
+    "altText": "Web Defacement: Judi Online",
+    "title": "WEB DEFACEMENT: JUDI ONLINE",
+    "description": "Dokumen tentang langkah-langkah penanggulangan insiden web defacement Judi Online dan Mitigasi.",
+    "link": "/assets/pdf/modules/Panduan-Penanganan-Insiden-Web-Defacement.pdf",
+    "createdAt": "01-10-2024 10:00",
+    "updatedAt": "21-10-2024 14:30",
+    "author": "BSSN Indonesia",
+    "category": "Keamanan",
+    "difficultyLevel": "beginner",
+    "tags": ["cybersecurity", "web security", "incidents"]
+  },
+  {
+    "imageSrc": "/assets/img/Modul-6.jpg",
+    "altText": "RFC 2350 EDU-CSIRT Kemendikbudristek",
+    "title": "RFC 2350 EDU-CSIRT KEMENDIKBUDRISTEK",
+    "description": "Dokumen ini berisi informasi tentang Edu-CSIRT Kemendikbudristek, tanggung jawab, layanan, serta cara menghubungi untuk penanganan insiden keamanan siber di sektor pendidikan sesuai pedoman RFC 2350.",
+    "link": "/assets/pdf/modules/RFC-2350-Edu-CSIRT-Kemedikbudristek.pdf",
+    "createdAt": "05-10-2024 08:45",
+    "updatedAt": "19-10-2024 12:15",
+    "author": "Kemendikbudristek",
+    "category": "Edukasi",
+    "difficultyLevel": "advanced",
+    "tags": ["csirt", "rfc 2350", "education sector"]
+  },
+  {
+    "imageSrc": "/assets/img/Modul-7.jpg",
+    "altText": "Lanskap Keamanan Siber Indonesia 2023",
+    "title": "LANSKAP KEAMANAN SIBER INDONESIA 2023",
+    "description": "Dokumen ini memaparkan kondisi keamanan siber di Indonesia pada tahun 2023, termasuk ancaman siber, insiden keamanan, dan strategi perlindungan yang disusun oleh BSSN untuk meningkatkan ketahanan siber nasional.",
+    "link": "/assets/pdf/modules/Lanskap-Keamanan-Siber-Indonesia-2023.pdf",
+    "createdAt": "10-10-2024 07:20",
+    "updatedAt": "23-10-2024 15:30",
+    "author": "BSSN Indonesia",
+    "category": "Keamanan",
+    "difficultyLevel": "advanced",
+    "tags": ["cybersecurity", "threat landscape", "indonesia"]
+  }
+]

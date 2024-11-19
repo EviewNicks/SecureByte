@@ -1,16 +1,17 @@
 import React from "react";
 
-const HeaderSection = ({ title, subtitle, description }) => {
+const HeaderSection = ({ title, subtitle, description }) =>
+{
   return (
-    <header className="header-section flex min-w-[1024px] px-20 justify-between items-center w-full">
-      <div className="header-content flex justify-between items-center flex-grow">
+    <header className="header-section flex flex-col md:flex-row md:min-w-[768px] lg:min-w-[1024px] md:px-10 lg:px-20 justify-between items-center w-full">
+      <div className="header-content flex flex-col lg:flex-row justify-between items-center flex-grow gap-6 md:gap-4 w-full">
         <div
           data-aos="fade-right"
-          className="heading-container flex pr-6 flex-col items-start flex-grow w-full"
+          className="heading-container flex flex-col items-start flex-grow md:flex-grow px-8 md:px-0 lg:pr-6 w-full"
         >
           {/* Title Section */}
-          <div className="title flex p-1 items-center w-full text-secondary">
-            <h1 className="text-h-lg">{title}</h1>
+          <div className="title flex p-1 items-center w-full text-secondary text-center">
+            <h1 className="md:text-h-lg text-h-sm">{title}</h1>
           </div>
 
           {/* Subtitle Section */}

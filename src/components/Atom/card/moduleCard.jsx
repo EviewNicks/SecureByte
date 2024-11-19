@@ -5,10 +5,12 @@ const ModuleCard = ({
   title = "Default Title",
   subtitle = "Default Subtitle",
   pdfUrl = "#",
-}) => {
+}) =>
+{
   const [isValidThumbnail, setIsValidThumbnail] = useState(true);
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     // Reset state saat thumbnail berubah
     setIsValidThumbnail(true);
   }, [thumbnail]);
@@ -18,6 +20,16 @@ const ModuleCard = ({
     backgroundImage: `url(${isValidThumbnail ? thumbnail : "/assets/img/add-image.png"})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+  };
+
+  // Fungsi untuk emmotong teks deksripsi jika lebih dari 250karakter
+  const truncateSubtitle = (text, maxLength) =>
+  {
+    if (text.length > maxLength)
+    {
+      return text.slice(0, maxLength) + "...";
+    }
+    return text;
   };
 
   return (
@@ -79,7 +91,7 @@ const ModuleCard = ({
 
         {/* Subtitle */}
         <div className="flex p-2.5 justify-center items-center gap-2.5 self-stretch flex-grow h-full">
-          <p className="text-center text-secondary text-p-sm">{subtitle}</p>
+          <p className="text-center text-secondary text-p-sm">{truncateSubtitle(subtitle, 100)}</p>
         </div>
       </article>
     </a>

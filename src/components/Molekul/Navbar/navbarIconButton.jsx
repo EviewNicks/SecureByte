@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const NavbarIconButton = ({
-  icon: IconComponent,
+  icon,
   label,
   href,
   color = "#FFF0D1",
@@ -17,27 +17,26 @@ const NavbarIconButton = ({
   return (
     <Wrapper
       to={href}
-      // onClick={(e) => {
-      //   if (onClick) {
-      //     e.preventDefault(); // Mencegah navigasi jika alert ditampilkan
-      //     onClick();
-      //   }
-      // }}
+      onClick={(e) =>
+      {
+        if (onClick)
+        {
+          e.preventDefault(); // Mencegah navigasi jika onClick didefinisikan
+          onClick();
+        }
+      }}
       aria-label={label}
-      className="
-        icon-navbar w-8 h-8 flex justify-center items-center cursor-pointer rounded-full
-        hover:bg-glass focus:bg-glass focus:shadow-[0px_1px_4px_0px] focus:shadow-[#FFF0D1]
-        focus:border focus:border-primary
-        transition duration-200 ease-in-out
-      "
+      className="icon-navbar w-8 h-8 flex justify-center items-center cursor-pointer rounded-full
+                 hover:bg-glass focus:bg-glass focus:shadow-[0px_1px_4px_0px] focus:shadow-[#FFF0D1]
+                 focus:border focus:border-primary transition duration-200 ease-in-out"
     >
-      <IconComponent color={color} width={size} height={size} />
+      {React.cloneElement(icon, { color, width: size, height: size })}
     </Wrapper>
   );
 };
 
 NavbarIconButton.propTypes = {
-  icon: PropTypes.elementType.isRequired,
+  icon: PropTypes.element.isRequired,
   label: PropTypes.string.isRequired,
   href: PropTypes.string,
   color: PropTypes.string,

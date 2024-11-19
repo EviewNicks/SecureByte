@@ -4,12 +4,15 @@ import ButtonVariant from "../../Atom/Button/Button";
 import { LinkedIn } from "../../Atom/icons/socialMedia";
 
 // Fungsi untuk handle gambar error
-const handleImageError = (setErrorCallback) => {
+const handleImageError = (setErrorCallback) =>
+{
   setErrorCallback(true); // Set error state to true
 };
 
-const getImageComponent = (imageUrl, imageError, handleError) => {
-  if (imageUrl && !imageError) {
+const getImageComponent = (imageUrl, imageError, handleError) =>
+{
+  if (imageUrl && !imageError)
+  {
     return (
       <img
         src={imageUrl}
@@ -22,7 +25,9 @@ const getImageComponent = (imageUrl, imageError, handleError) => {
   return <div className="w-[160px] h-[160px] rounded-full bg-gold"></div>;
 };
 
-const ProfileCard = ({ imageUrl, name, className, linkedInUrl }) => {
+
+const ProfileCard = ({ imageUrl, name, className, linkedInUrl }) =>
+{
   const [imageError, setImageError] = useState(false);
 
   const imageComponent = getImageComponent(imageUrl, imageError, () =>
@@ -51,7 +56,16 @@ const ProfileCard = ({ imageUrl, name, className, linkedInUrl }) => {
         size="medium"
         primary={false}
         withIconLeft={<LinkedIn color="#FFF0D1" />}
-        onClick={() => window.open(linkedInUrl, "_blank")} // Opens LinkedIn link
+        onClick={() =>
+        {
+          if (linkedInUrl)
+          {
+            window.open(linkedInUrl, "_blank");
+          } else
+          {
+            console.warn("LinkedIn URL is not available.");
+          }
+        }}
       />
     </article>
   );

@@ -5,10 +5,12 @@ import HeadlineBoxLine from "../../Atom/Accesories/headlineBoxLine";
 import NewsSection from "../../Molekul/HomePageUser/newsSection";
 import HeadlineButtonBox from "../../Molekul/HomePageUser/HeadlineButtonBox";
 
-const NewsContainer = () => {
+const NewsContainer = () =>
+{
   const navigate = useNavigate();
 
-  const handleNavigateArticle = () => {
+  const handleNavigateArticle = () =>
+  {
     navigate("/article-page");
   };
 
@@ -69,7 +71,7 @@ const NewsContainer = () => {
   ];
 
   return (
-    <section className="flex px-20 pb-20 flex-col items-center gap-20 self-stretch min-w-screen-lg">
+    <section className="lg:col-span-12 md:col-span-6 sm:col-span-4 px-4 md:px-10 lg:px-20 pb-20 flex flex-col items-center gap-20">
       <HeadlineBoxLine
         text="Modul Pembelajaran"
         bgColor="bg-gold"

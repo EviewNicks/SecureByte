@@ -6,7 +6,7 @@ import FooterSocialMedia from "../Molekul/footer/footerSocialMedia";
 import FooterBottomSection from "../Molekul/footer/footerBottom";
 
 const Footer = () => (
-  <footer className="footer flex flex-col justify-center items-center self-stretch w-full py-2">
+  <footer className="footer lg:col-span-12 md:col-span-6 sm:col-span-4 flex flex-col justify-center items-center self-stretch w-full py-2">
     {/* <!-- Main Section --> */}
     <div className="footer-main-section flex justify-between items-center flex-wrap pb-4 border-b-2 border-secondary w-full">
       {/* First Column: Logo and Image */}

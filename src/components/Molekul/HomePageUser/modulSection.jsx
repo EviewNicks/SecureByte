@@ -11,9 +11,21 @@ const ModuleSection = ({
   description,
   flowLinePosition = "middle",
   isOdd = true, // Menentukan susunan berdasarkan ganjil/genap
-}) => {
+  pdfLink
+}) =>
+{
+
+  const openPdf = () =>
+  {
+    window.open(pdfLink, "_blank");
+  }
+
   return (
-    <article className="module-container flex min-w-[1024px] px-10 justify-between items-center self-stretch">
+    <article
+      onClick={openPdf}
+      role="button"
+      aria-label={`Open ${title}`}
+      className="module-container flex min-w-[1024px] px-10 justify-between items-center self-stretch cursor-pointer transition duration-300 transform hover:scale-95 hover:shadow-lg">
       {isOdd ? (
         <>
           {/* Susunan ganjil: Image, FlowLine, Introduction */}
