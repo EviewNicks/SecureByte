@@ -1,14 +1,18 @@
 // src/components/Navbar.jsx
 import React from "react";
 import NavbarIconButton from "./navbarIconButton";
-import Bell from "../../Atom/icons/functions/Bell";
-import User from "../../Atom/icons/people/user";
-const IconNavbar = () => {
-  const handleNotificationClick = () => {
+// import NavbarIconButton from "/var/www/SecureByte/src/components/Molekul/Navbar/navbarIconButton.jsx";
+// import Bell from "/var/www/SecureByte/src/components/Atom/icons/functions/Bell";
+// import User from "/var/www/SecureByte/src/components/Atom/icons/people/user";
+const IconNavbar = () =>
+{
+  const handleNotificationClick = () =>
+  {
     alert("Notifikasi diklik!");
   };
 
-  const handleProfileClick = () => {
+  const handleProfileClick = () =>
+  {
     alert("Profil diklik!");
   };
 
