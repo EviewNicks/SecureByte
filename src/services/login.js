@@ -7,6 +7,8 @@ const LOGIN_URL = "http://localhost:3000/api/login";
 // Mengonversi secret key menjadi Uint8Array
 const secretKey = new TextEncoder().encode("122");
 
+// alalslsa
+
 // Fungsi untuk mengirim request login ke backend
 async function login(email, password) {
   try {
