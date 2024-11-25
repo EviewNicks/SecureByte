@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import Logo from "../Molekul/Navbar/Logo";
 import NavList from "../Molekul/Navbar/listNavigasi";
 import NavbarIconButton from "../Molekul/Navbar/navbarIconButton";
-import Bell from "../Atom/icons/functions/Bell";
-import User from "../Atom/icons/people/User";
+// import Bell from "../Atom/icons/functions/Bell";
+// import User from "../Atom/icons/people/User";
 import { ArrowUp } from "../Atom/icons/arrow";
 import ButtonVariant from "../Atom/Button/Button";
 

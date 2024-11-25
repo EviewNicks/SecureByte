@@ -1,8 +1,8 @@
 // src/components/Navbar.jsx
 import React from "react";
 import NavbarIconButton from "./navbarIconButton";
-import Bell from "../../Atom/icons/functions/Bell";
-import User from "../../Atom/icons/people/User";
+// import Bell from "../../Atom/icons/functions/Bell";
+// import User from "../../Atom/icons/people/User";
 // import NavbarIconButton from "/var/www/SecureByte/src/components/Molekul/Navbar/navbarIconButton.jsx";
 // import Bell from "/var/www/SecureByte/src/components/Atom/icons/functions/Bell";
 // import User from "/var/www/SecureByte/src/components/Atom/icons/people/user";
